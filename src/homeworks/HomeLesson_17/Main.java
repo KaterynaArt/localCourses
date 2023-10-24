@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class Main {
     public static void main(String[] args) {
 
-        ArrayList<Student> myStudentArrayList = new ArrayList<Student>();
+        ArrayList<Student> myStudentArrayList = new ArrayList<>();
 
         Student firstStudent = new Student("Bob", 100);
         Student secondStudent = new Student("Max", 58);
