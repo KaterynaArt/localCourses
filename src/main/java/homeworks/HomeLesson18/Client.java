@@ -20,8 +20,13 @@ abstract class Client {
 
     public abstract void deposit(double amount);
 
-    public abstract void withdraw(double amount) throws InsufficientFundsException, NegativeBalanceException;
-
+    public void withdraw(double amount) throws InsufficientFundsException, NegativeBalanceException {
+        if (amount < 0) {
+            throw new NegativeBalanceException("Ошибка: Сумма снятия должна быть положительной.");
+        } else if (amount > balance) {
+            throw new InsufficientFundsException("Ошибка: Недостаточно средств на счете.");
+        }
+    }
     public void checkBalance() {
         System.out.println("Баланс: " + balance);
     }

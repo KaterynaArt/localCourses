@@ -16,11 +16,7 @@ class PrivateEntities extends Client {
 
     @Override
     public void withdraw(double amount) throws InsufficientFundsException, NegativeBalanceException {
-        if (amount < 0) {
-            throw new NegativeBalanceException("Ошибка: Сумма снятия должна быть положительной.");
-        } else if (amount > balance) {
-            throw new InsufficientFundsException("Ошибка: Недостаточно средств на счете.");
-        } else if (balance - (amount + (amount * 0.01)) < 0) {
+         if (balance - (amount + (amount * 0.01)) < 0) {
             throw new NegativeBalanceException("Ошибка: Отрицательный баланс не допускается.");
         } else {
             if (amount <= 0.5) {
