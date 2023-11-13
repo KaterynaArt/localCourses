@@ -1,5 +1,7 @@
 package homeworks.Homework20;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Launcher {
@@ -37,7 +39,7 @@ public class Launcher {
             }
         }
 
-        Burger burger = new Burger(chosenSize, chosenMeat);
+        List<Ingredient> chosenIngredients = new ArrayList<>();
 
         System.out.println("Add ingredients or 'Done' to finish:");
         while (true) {
@@ -62,9 +64,9 @@ public class Launcher {
                     input = scanner.next().toUpperCase();
                 }
             }
-            burger.addIngredient(chosenIngredient);
+            chosenIngredients.add(chosenIngredient);
         }
-
+        Burger burger = new Burger(chosenSize, chosenMeat, chosenIngredients);
         System.out.println("Here's your burger:");
         burger.displayBurgerInfo();
     }

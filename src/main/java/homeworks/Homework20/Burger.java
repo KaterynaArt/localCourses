@@ -1,19 +1,17 @@
 package homeworks.Homework20;
 
 import java.util.ArrayList;
+import java.util.List;
+
 public class Burger {
     private BurgerSize size;
     private MeatType meat;
-    private ArrayList<Ingredient> ingredients;
+    private List<Ingredient> ingredients;
 
-    public Burger(BurgerSize size, MeatType meat) {
+    public Burger(BurgerSize size, MeatType meat, List<Ingredient> ingredients) {
         this.size = size;
         this.meat = meat;
-        this.ingredients = new ArrayList<>();
-    }
-
-    public void addIngredient(Ingredient ingredient) {
-        ingredients.add(ingredient);
+        this.ingredients = ingredients;
     }
 
     public double calculateTotalPrice() {

@@ -1,7 +1,7 @@
 package homeworks.Homework20;
 import java.util.EnumSet;
 public enum Ingredient {
-    CHEESE(1.50),
+    CHEESE(1.00),
     TOMATO(1.20),
     LETTUCE(1.60);
 
