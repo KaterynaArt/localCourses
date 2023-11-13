@@ -1,0 +1,20 @@
+
+Логотип
+1.//img[@alt='Rozetka Logo']
+2.img[alt='Rozetka Logo']
+
+Kнопка Каталога
+
+1.//button[@id='fat-menu']
+2.button#fat-menu
+
+Kнопка микрофон
+
+1.//button[contains(@class, 'search-form__microphone')]
+2.button[class*='search-form__microphone']
+
+Kнопка корзины
+
+1.//li[@class='header-actions__item header-actions__item--cart']//button
+2.li[class='header-actions__item header-actions__item--cart'] button[class='header__button ng-star-inserted']
+
