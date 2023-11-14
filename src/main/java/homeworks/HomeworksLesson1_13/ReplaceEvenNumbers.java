@@ -1,3 +1,5 @@
+package homeworks.HomeworksLesson1_13;
+
 public class  ReplaceEvenNumbers {
     public static void main(String[] args) {
         // Создаем массив с числами

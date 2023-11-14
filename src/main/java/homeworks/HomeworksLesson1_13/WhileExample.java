@@ -1,4 +1,4 @@
-package homeworks;
+package homeworks.HomeworksLesson1_13;
 
 public class WhileExample {
     public static void main(String[] args) {
