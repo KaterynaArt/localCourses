@@ -1,4 +1,4 @@
-package homeworks.lesson_14;
+package homeworks.HomeworkLesson_14;
 class InsufficientFundsException extends Exception {
     public InsufficientFundsException(String message) {
         super(message);

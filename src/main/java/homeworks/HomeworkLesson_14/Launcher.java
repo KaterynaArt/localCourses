@@ -1,4 +1,4 @@
-package homeworks.lesson_14;
+package homeworks.HomeworkLesson_14;
 
 public class Launcher {
     public static void main(String[] args) throws NegativeBalanceException, InsufficientFundsException {
