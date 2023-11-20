@@ -1,13 +1,13 @@
 package lesson23;
 
-import init.WebDriverInit;
+import init.InitialWebDriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class TestWithGetCssValue extends WebDriverInit {
+public class TestWithGetCssValue extends InitialWebDriver {
     final String EXPECTED_LABEL_COLOR = "rgba(0, 160, 70, 1)";
 
     @Test
