@@ -1,6 +1,6 @@
 package Homework23;
 
-import init.WebDriverInit;
+import init.InitialWebDriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -10,7 +10,7 @@ import java.time.Duration;
 import org.testng.asserts.SoftAssert;
 
 
-public class TestAddToCart extends WebDriverInit {
+public class TestAddToCart extends InitialWebDriver {
     @Test
     public void addProductToBasket() {
         driver.get("https://rozetka.com.ua/");
