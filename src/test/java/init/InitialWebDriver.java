@@ -1,7 +1,9 @@
 package init;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -14,6 +16,11 @@ public class InitialWebDriver {
 
     public WebDriver driver;
     public WebDriverWait webDriverWait;
+
+    public void jsExecutor(WebDriver driver, String jsCommand, WebElement locator) {
+        JavascriptExecutor jse = (JavascriptExecutor) driver;
+        jse.executeScript(jsCommand, locator);
+    }
 
     @BeforeClass
     public void initBefore() {
@@ -37,7 +44,9 @@ public class InitialWebDriver {
 
         options.addArguments("--start-maximized");
         driver = new ChromeDriver(options);
-        webDriverWait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        webDriverWait = new WebDriverWait(driver, Duration.ofSeconds(20));
+
+
     }
 
     @AfterClass
