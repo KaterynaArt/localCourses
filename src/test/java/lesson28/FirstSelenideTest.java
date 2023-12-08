@@ -8,7 +8,8 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import static com.codeborne.selenide.Selenide.*;
+import static com.codeborne.selenide.Selenide.$;
+import static com.codeborne.selenide.Selenide.open;
 
 public class FirstSelenideTest {
 
@@ -25,13 +26,13 @@ public class FirstSelenideTest {
 
     @Test
     public void testSelenide() {
-
-            Cookie cookie = new Cookie("cf_clearance","ejhbfjehvjhebvkjebvkjernrbjlver");
-            WebDriverRunner.getWebDriver().manage().deleteCookieNamed("cf_clearance");
-            WebDriverRunner.getWebDriver().manage().addCookie(cookie);;
-
         open("https://rozetka.com.ua/");
+        Cookie cookie = new Cookie("cf_clearance", "ejhbfjehvjhebvkjebvkjernrbjlver");
+        WebDriverRunner.getWebDriver().manage().deleteCookieNamed("cf_clearance");
+        WebDriverRunner.getWebDriver().manage().addCookie(cookie);
+
+
         $(By.name("search")).setValue("Mac").pressEnter();
-        sleep(5000);
+
     }
 }
